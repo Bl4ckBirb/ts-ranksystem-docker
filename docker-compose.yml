@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  ranksystem:
+    container_name: ts-ranksystem
+    image: Bl4ckBirb/ts-ranksystem-docker:latest
+    restart: always
+    ports:
+      - 8443:80
+    volumes:
+      - ./www/:/var/www/html/
