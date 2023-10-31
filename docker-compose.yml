@@ -3,7 +3,7 @@ version: '3'
 services:
   ranksystem:
     container_name: ts-ranksystem
-    image: Bl4ckBirb/ts-ranksystem-docker:latest
+    image: bl4ckbirb/ts-ranksystem-docker:latest
     restart: always
     ports:
       - 8443:80
