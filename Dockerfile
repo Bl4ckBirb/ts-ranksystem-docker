@@ -11,3 +11,6 @@ RUN sed -ri -e 's!80!${APACHE_PORT}!g' /etc/apache2/ports.conf
 ENV APACHE_PORT_SSL 443
 RUN sed -ri -e 's!443!${APACHE_PORT_SSL}!g' /etc/apache2/ports.conf
 COPY php.ini /usr/local/etc/php/php.ini
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
